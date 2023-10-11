@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net"
 )
 
@@ -11,6 +12,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	go func() {
+		log.Println("SERVER | listening on port 5000")
+	}()
 
 	for {
 		// read
@@ -29,5 +34,4 @@ func main() {
 			panic(err)
 		}
 	}
-
 }

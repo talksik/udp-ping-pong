@@ -15,7 +15,7 @@ func main() {
 		panic(err)
 	}
 
-	localAddr, err := net.ResolveUDPAddr("udp", "0.0.0.0:5001")
+	localAddr, err := net.ResolveUDPAddr("udp", "0.0.0.0:3000")
 	if err != nil {
 		fmt.Println("Error resolving address:", err)
 		panic(err)
